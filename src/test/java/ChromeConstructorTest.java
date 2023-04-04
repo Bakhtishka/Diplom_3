@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 
 //тестовый класс, проверяет работу Конструктора, переходы в его разделы: Булки, Соусы, Начинки.
 public class ChromeConstructorTest {

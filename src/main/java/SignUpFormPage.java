@@ -20,7 +20,7 @@ public class SignUpFormPage {
     private final By passwordField = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[3]/div/div/input");
 
     //локатор кнопки Зарегистрироваться
-    private final By loginButton = By.xpath("//*[@id='root']/div/main/div/form/button");
+    private final By loginButton = By.xpath("//*[@id=\"root\"]/div/main/div/form/button");
 
 
     //локатор для кнопки Личный кабинет на главной странице

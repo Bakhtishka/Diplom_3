@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
-
-
 //тестовый класс, проверяет работу Конструктора, переходы в его разделы: Булки, Соусы, Начинки.
 //в Яндекс браузере
 public class YandexConstructorTest {

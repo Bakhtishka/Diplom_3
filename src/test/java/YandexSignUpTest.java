@@ -19,7 +19,6 @@ public class YandexSignUpTest {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.http.factory", "jdk-http-client");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/yandexdriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Users\\babdu\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe");
