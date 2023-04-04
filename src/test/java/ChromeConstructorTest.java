@@ -14,8 +14,7 @@ public class ChromeConstructorTest {
     @Before
     public void setUp() {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
     }
 
     @Test
