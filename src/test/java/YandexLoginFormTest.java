@@ -109,7 +109,7 @@ public class YandexLoginFormTest {
     @Test
     @DisplayName("Переход из личного кабинета в конструктор")
     @Description("Логинимся, переходим в личный кабинет, кликаем на кнопку Конструктор" +
-            "переходим на морду сайта и проверяем успех")
+            " переходим на морду сайта и проверяем успех")
     public void swishFromProfilePageToConstructorSection() {
         LoginFormPage enter = new LoginFormPage(driver);
         enter.open();
