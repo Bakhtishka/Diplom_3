@@ -11,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class YandexLoginFormTest {
     private WebDriver driver;
 
-    String email = "kaban@kaban.ru";
-    String password = "aassddff";
+    String email = "baba@baba.ru";
+    String password = "babababa";
 
     @Before
     public void setUp() {

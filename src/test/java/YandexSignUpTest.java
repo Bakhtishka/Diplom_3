@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
-//тестовый класс для проверки сценария регистрации в Хроме
+//тестовый класс для проверки сценария регистрации в Яндекс браузере
 public class YandexSignUpTest {
     private WebDriver driver;
     Faker faker = new Faker();

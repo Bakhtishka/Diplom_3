@@ -1,10 +1,12 @@
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
 
 public class ConstructorSection {
 
@@ -18,13 +20,13 @@ public class ConstructorSection {
     private final By fillingsButton = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[1]/div[3]");
 
     //локатор раздела булки
-    private final By bunsSection = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[2]/h2[1]");
+    private final By bunsSection = By.xpath("//*[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']//span[@class=\"text text_type_main-default\"]");
 
     //локатор раздела соусы
-    private final By saucesSection = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[2]/h2[2]");
+    private final By saucesSection = By.xpath("//*[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']//span[@class=\"text text_type_main-default\"]");
 
     //локатор раздела начинки
-    private final By fillingsSection = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[2]/h2[3]");
+    private final By fillingsSection = By.xpath("//*[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']//span[@class=\"text text_type_main-default\"]");
 
     private final WebDriver driver;
 
@@ -45,9 +47,11 @@ public class ConstructorSection {
 
     //метод проверяет открытие раздела Булки в конструкторе
     public void checkIsOpenBunsSection() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(bunsSection));
-        Assert.assertTrue(driver.findElement(bunsSection).isDisplayed());
+        final WebElement element = driver.findElement(bunsSection);
+        Assert.assertTrue(element.isDisplayed());
+        wait.until(ExpectedConditions.textToBePresentInElement(element, "Булки"));
     }
 
     //метод кликает на кнопку Соусы
@@ -59,9 +63,11 @@ public class ConstructorSection {
 
     //метод проверяет открытие раздела Соусы
     public void checkIsOpenSaucesSection() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(saucesSection));
-        Assert.assertTrue(driver.findElement(saucesSection).isDisplayed());
+        final WebElement element = driver.findElement(saucesSection);
+        Assert.assertTrue(element.isDisplayed());
+        wait.until(ExpectedConditions.textToBePresentInElement(element, "Соусы"));
     }
 
     //метод кликает на кнопку Начинки
@@ -75,7 +81,9 @@ public class ConstructorSection {
     public void checkIsOpenFillingsSection() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
         wait.until(ExpectedConditions.visibilityOfElementLocated(fillingsSection));
-        Assert.assertTrue(driver.findElement(fillingsSection).isDisplayed());
+        final WebElement element = driver.findElement(fillingsSection);
+        Assert.assertTrue(element.isDisplayed());
+        wait.until(ExpectedConditions.textToBePresentInElement(element, "Начинки"));
     }
 
 }
